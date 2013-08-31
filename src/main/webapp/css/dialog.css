@@ -1,0 +1,21 @@
+.close {
+position: absolute;
+right: 8px;
+top: 0;
+display: block;
+width: 33px;
+height: 17px;
+background: url(images/close.png) no-repeat;
+text-indent: -9999px;
+outline: none;
+}
+
+.top_h4 {
+font-size: 16px;
+background: url(images/login_box_title_bg.png) repeat-x;
+line-height: 36px;
+margin-bottom: 20px;
+letter-spacing: 1px;
+text-indent: 23px;
+color: #232324;
+}

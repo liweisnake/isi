@@ -1,0 +1,18 @@
+
+
+td {
+font-size: 12px;
+color:#FF6600;
+}
+
+.solidbox {
+float: left;
+	BORDER-TOP: #D7D7D7 0px solid; 
+	BORDER-RIGHT: #D7D7D7 0px solid; 
+	BORDER-BOTTOM: #D7D7D7 0px solid;
+	BORDER-LEFT: #D7D7D7 0px solid;
+	background-image:/*url(../images/f-bg.jpg)*/;
+	width:730px;
+	height:455px;
+}
+

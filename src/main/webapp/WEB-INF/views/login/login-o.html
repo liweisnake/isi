@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Simple Javascript Accordions - by www.dezinerfolio.com</title>
+<style type="text/css">
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	margin:10px;
+}
+
+#basic-accordian{
+	border:5px solid #EEE;
+	padding:5px;
+	width:375px;
+	position:absolute;
+	left:22%;
+	top:13%;
+	margin-left:-175px;
+	z-index:2;
+	margin-top:-100px;
+}
+
+.accordion_headings{
+	padding:5px;
+	background:#8e8f8d;
+	color:#FFFFFF;
+	border:1px solid #FFF;
+	cursor:pointer;
+	font-weight:bold;
+}
+
+.accordion_headings:hover{
+	background:#FF6600;
+}
+
+.accordion_child{
+	padding:15px;
+	background:#EEE;
+}
+
+.header_highlight{
+	background:#FF6600;
+}
+
+</style>
+<script type="text/javascript" src="stylesheets/m-table/accordian.pack.js"></script>
+</head>
+<body onload="new Accordian('basic-accordian',5,'header_highlight');">
+
+
+<div id="basic-accordian" ><!--Parent of the Accordion-->
+
+
+<div style="width:125px; float:right">
+  <div id="test1-header" class="accordion_headings header_highlight" >注&nbsp;&nbsp;&nbsp;&nbsp;册</div>
+  <div id="test2-header" class="accordion_headings" >登&nbsp;&nbsp;&nbsp;&nbsp;录</div>
+  <div id="test3-header" class="accordion_headings" >找回密码/修改密码</div>
+</div>
+
+<div style="float:left; width:250px;">所有带*号的为必填项
+  <div id="test1-content">
+  <iframe height="870" name="neepage" width="650" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="registration.html"></iframe>
+  </div>
+  
+  <div id="test2-content">
+	<iframe height="330" name="neepage" width="650" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="login.html"></iframe>
+  </div>
+  
+  <div id="test3-content">
+    	<iframe height="470" name="neepage" width="650" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="change-password.html"></iframe>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div><!--End of accordion parent-->
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+/*
+Template Name: Health Life
+Version: 1.0
+Design: Karlo Domic ( karlodomic@gmail.com )
+Code: Slicejack ( http://www.slicejack.com )
+*/
+
+body { background: #fff /*url('../images/layout/body.gif')*/ top repeat-x; font-family: Arial, Helvetica, sans-serif; }
+
+
+a:link { text-decoration: none;
+color:#FF6600;
+
+}
+
+#container { width: 80%; margin: 0 auto;}
+
+/* =Header
+----------------------------------------------- */
+#header { height: 50px; position: relative; padding-bottom:40px; width:100%;}
+
+	#header h1 a { display: block; text-indent: -5000px; width: 137px; height: 50px; background: url('../images/layout/logo.gif') no-repeat; position: absolute; left: 20px; top: 30px; }
+	
+	#utility-nav { position: absolute; right: 20px; top: 35px; width:550px}
+	#utility-nav li { display: inline; }
+	#utility-nav li a { display: block; float: left; font-size: 11px; color: #333; text-decoration: none; padding: 0 5px; background: url('../images/nav/utility_nav_divider.gif') left no-repeat; }
+	#utility-nav li a:hover, #utility-nav li a.active { color:#FF6600; text-decoration: underline; }
+	#utility-nav li.first-item a { background: none; }
+	
+	#main-nav { background: url('../images/nav/main_nav.gif') left no-repeat; margin: 0 -9px; height: 53px; width: 891px; position: absolute; bottom: 11px; padding: 15px 0 0 27px; }
+	#main-nav li { display: inline; }
+	#main-nav li a { display: block; float: left; font-size: 12px; font-weight: bold; color: #fff; text-decoration: none; padding: 12px 20px 0 20px; background: url('../images/nav/main_nav_divider.gif') left no-repeat; height: 27px; }
+	#main-nav li.first-item a { background: none; padding-left: 0;}
+	#main-nav li a.active span {  background: url('../images/nav/main_nav_active.gif') bottom center no-repeat; height: 31px; display: block; float: left; cursor: pointer; color: #B3640D; }
+	#main-nav li a:hover { color: #B3640D; }
+	
+/* =Sub Header
+----------------------------------------------- */
+#sub-header { background: url('../images/layout/sub_header+2.gif') no-repeat; background-position:left; width: 750; position: relative; padding-top: 43px; margin-bottom: 0px; }
+
+	p.breadcrumbs { font-size: 11px; color: #777; position: absolute; top: -88px; left: 5px; }
+	
+	#search { background: url('../images/form/search.gif') no-repeat; width: 220px; height: 20px; position: absolute; right: 7px; top: -58px; }
+	#search legend { display: none; }
+	#search .input-text { width: 187px; background: none; border: none; font-size: 11px; color: #999; display: block; float: left; padding: 3px 0 0 9px; }
+	#search .input-button { width: 16px; height: 20px; cursor: pointer; background: none; border: none; }
+	
+	#images { background: #fff; height: 111px;}
+	#images li { display: block; float: left; margin: 1px 1px 0 0;}
+	#images li.first-item { margin-left: 1px; }
+	#images li.last-item { margin-right: 0; }
+	
+	#directory { background: url('../images/layout/directory.gif') bottom no-repeat; padding: 0 0 11px 0; }
+	#directory-inner { background: #f5f5f5 url('../images/layout/directory_list.gif') top left no-repeat; height:250px; padding-bottom: 5px;}
+	#directory ul { width: 159px; float: left; padding: 10px 0 0 20px; }
+	#directory ul li { background: url('../images/icons/directory_bullet.gif') left no-repeat; padding-left: 8px; }
+	#directory ul li a { font-size: 11px; color: #666; text-decoration: none; line-height: 1.6; }
+	#directory ul li a:hover, #directory ul li a.active { border-bottom: 1px dotted #333; color: #333; }
+
+/* =Sidebar
+----------------------------------------------- */
+#sidebar { width: 247px; float: left; padding-left: 20px; margin-right: 20px; }
+	#sidebar h2, #main-content h2 { font-size: 20px; color: #2e9eff; margin-bottom: 5px; text-indent: 8px; }
+	#sidebar ul { background: #f4f4f4 url('../images/layout/sidebar_li.gif') top repeat-x; }
+	#sidebar ul li { padding: 10px; background: url('../images/layout/sidebar_li.gif') bottom repeat-x; line-height: 1.4; }
+	#sidebar ul li img { float: left; padding: 1px; border: 1px solid #ddd; margin-right: 8px; }
+	#sidebar ul li h3 { font-size: 11px; font-weight: bold; color: #ee912a; }
+	#sidebar ul li p { font-size: 11px; color: #999; }
+	#sidebar ul li a { background: url('../images/icons/read_more.gif') left no-repeat; padding-left: 12px; color: #5c91c7; font-size: 11px; }
+	#sidebar ul li a:hover { color: #386da4; }
+
+/* =Main Content
+----------------------------------------------- */
+#main-content { width: 592px; float: left; margin-bottom: 20px; }
+	.article-wrapper .article-actions { background: url('../images/layout/article_actions.gif') top repeat-x; height: 34px; font-size: 11px; color: #999; padding: 10px 0 0 8px; }
+	.article-wrapper .article-actions li { display: inline; margin-right: 10px; }
+	.article-wrapper .article-actions li img { vertical-align: middle; margin-right: 6px; }
+	.article-wrapper .article-actions li a { color: #666; }
+	.article-wrapper .article-actions li a:hover { text-decoration: underline; }
+	.article-wrapper .article { width: 574px; margin: 0 auto; }
+	.article-wrapper .article h3 { font-size: 16px; font-weight: bold; color: #ee912a; margin-bottom: 6px; }
+	.article-wrapper .article p { color: #666; font-size: 12px; line-height: 1.6; margin-bottom: 10px; }
+	.article-wrapper .article strong { font-weight: bold; }
+	.article-wrapper .article em { font-style: italic; }
+	.article-wrapper .article p a { color: #5c91c7; }
+	.article-wrapper .article p a:hover { color: #3b6691; }
+
+/* =Footer
+----------------------------------------------- */
+#footer { background: url('../images/layout/footer.gif') no-repeat; width: 898px; height: 27px; margin: -030px auto 10px auto; clear: both; padding-top:13px; position: relative; }
+	#footer p { font-size: 11px; color: #999;}
+	#footer p.copyright { padding-left: 25px; }
+	#footer p.copyright span { color: #5c91c7; }
+	#footer p.authors { position: absolute; right: 25px; top: 14px; }
+	#footer p.authors a { color: #5c91c7; text-decoration: none; } 

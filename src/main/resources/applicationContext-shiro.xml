@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd"
+	default-lazy-init="true">
+
+	<description>Shiro Configuration</description>
+	
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+			<property name="realm" ref="authRealm" />
+			<property name="cacheManager" ref="cacheManager" />
+		</bean>
+		
+		<bean id="cacheManager" class="org.apache.shiro.cache.MemoryConstrainedCacheManager" />
+
+		<bean id="authRealm" class="skynet.isi.auth.AuthRealm" />
+
+		<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor" />
+
+		<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" depends-on="lifecycleBeanPostProcessor">
+			<property name="proxyTargetClass" value="true" />
+		</bean>
+			
+		<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+			<property name="securityManager" ref="securityManager"/>
+		</bean>
+
+		<!-- Shiro Filter -->
+		<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+			<property name="securityManager" ref="securityManager" />
+			<property name="loginUrl" value="/frontend/showLogin" />
+			<property name="successUrl" value="/frontend/showIndex" />
+			<property name="unauthorizedUrl" value="/frontend/showLogin" />
+			<property name="filterChainDefinitions">
+				<value>
+					/frontend/userInfo = authc
+					/frontend/getShoppingCart = authc
+					/** = anon
+				</value>
+			</property>
+		</bean>
+		
+		<bean id="adminFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+			<property name="securityManager" ref="securityManager" />
+			<property name="loginUrl" value="/admin/showAdminLogin" />
+			<property name="successUrl" value="/admin/showAdminIndex" />
+			<property name="unauthorizedUrl" value="/admin/showAdminLogin" />
+			<property name="filterChainDefinitions">
+				<value>
+					/image/** = anon
+					/login_files/** = anon
+					/admin/showAdminLogin = anon
+					/admin/adminLogin = anon
+					/admin/** = roles[admin]
+					/** = authc
+				</value>
+			</property>
+		</bean>
+</beans>

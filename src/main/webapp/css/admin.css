@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	height: 850px;
+	background-color: #EF9735;
+	font-size: 12px;
+	background-image: url(../image/admin/admin-bg.jpg);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+a {
+	cursor: pointer;
+	color: #E7E7D8;
+	text-decoration:none;
+}
+
+a:hover {
+	color: #333333;
+}
+
+.bottom {
+	color: #FF6600;
+}
+
+h2 {
+	font-family: "Times New Roman", Times, serif;
+	color: #666;
+}
+
+.register {
+	background-image: url(../image/menu/login-bt1.jpg);
+	background-repeat: no-repeat;
+	background-position: center left;
+	padding-left: 6px;
+}
+
+.register:hover {
+	background-image: url(../image/menu/login-bt1-over.jpg);
+	background-repeat: no-repeat;
+	background-position: center left;
+	padding-left: 6px;
+}
+
+.left {
+	height: 35px;
+	text-align: right;
+	background-image: url(../image/admin/bg-menu-item-green.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+	font-size: 14px;
+	font-family: "黑体";
+	color: #E7E7D8;
+	padding-right: 10px;
+	padding-top: 7px;
+}
+
+.left-t {
+	height: 40px;
+	text-align: right;
+	background-image: url(../image/admin/bg-menu-item-black.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+	font-size: 18px;
+	font-family: "黑体";
+	color: #FF6600;
+	padding-right: 10px;
+	padding-top: 7px;
+}
+
+.confirmation {
+	background-image: url(../image/menu/login-bt0.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 109px;
+	height: 39px;
+}
+
+.confirmation a {
+	color: #333333;
+}
+
+.confirmation:hover {
+	background-image: url(../image/menu/login-bt0-over.jpg);
+}
+
+textarea{
+	resize:none; 
+	background:transparent; 
+	border-color:transparent;
+	overflow-y:hidden;
+	overflow-x:hidden;
+	width:90%;
+	height:90%;
+}
